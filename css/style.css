@@ -1,0 +1,175 @@
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    --burgerline_width: 30px;
+    --burgerline_height: 6px;
+    --burgerline_margin: 5px;
+    
+    --background_color: #00677C;
+}
+
+/* Generella taggar */
+nav {
+    height: 100px;
+    width: 100%;
+    background-color: var(--background_color);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Wrappers */
+#wrapper_main {
+    display: grid;
+    height: 100vh;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows: 60px 200px 500px;
+    grid-template-areas: 
+    "nav nav"
+    "rub rub"
+    "slogan picture"
+    ;
+}
+
+/* Responsiv layout taggar */
+.links_visible {
+    transform: translateY(500px);
+}
+
+.burger_line {
+    width: var(--burgerline_width);
+    height: var(--burgerline_height);
+    margin: var(--burgerline_margin);
+    background: rgb(255, 255, 255);
+    border-radius: 20%;
+    transition: all 0.5s;
+}
+
+#link_list {
+    background: var(--background_color);
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    position: absolute;
+    top: -400px;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+    z-index: 1;
+    border: 1px solid grey;
+}
+
+#burger {
+    margin-right: 80px;
+    cursor: pointer;
+}
+
+#link_list a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 1.25rem;
+    letter-spacing: 0.1875rem;
+    text-transform: uppercase;
+    width: 200px;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#link_list a:hover {
+    color: black;
+}
+
+.burger_in_x_form #burger_line_2 {
+    opacity: 0;
+}
+
+.burger_in_x_form #burger_line_1 {
+    transform: translateY(calc(var(--burgerline_height) + var(--burgerline_margin))) rotate(45deg);
+}
+
+.burger_in_x_form #burger_line_3 {
+    transform: translateY(calc((-1)*(var(--burgerline_height) + var(--burgerline_margin)))) rotate(-45deg);
+}
+
+
+@media screen and (min-width: 800px) {
+
+main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 250px 400px minmax(250px, 1fr);
+        grid-template-areas:
+            "welcome_ section2"
+            "section1 section3" 
+            "section4 section4"
+            ;
+        gap: 2px;
+        background: grey;
+    }
+
+
+#burger {
+
+    display: none;
+}
+
+#link_list {
+    flex-direction: row;
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+}
+
+#link_list a:hover {
+    background: none;
+    color: black;
+}
+
+}
+
+/* Första sida (Homepage) */
+
+
+#picture_main {
+    grid-area: picture;
+
+}
+
+#slogan {
+    grid-area: slogan;
+    background-color: purple;
+
+}
+
+.rubrik {
+    grid-area: rub;
+    background-color: #00A788;
+    height: 260px;
+    width: 200%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 6.25rem;
+    letter-spacing: 0.1875rem;
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
