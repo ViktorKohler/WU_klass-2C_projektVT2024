@@ -11,7 +11,7 @@
     --burgerline_height: 6px;
     --burgerline_margin: 5px;
     
-    --background_color: #00677C;
+    --background_color: #2F4858;
 }
 
 /* Generella taggar */
@@ -25,18 +25,55 @@ nav {
     font-family: 'Courier New', Courier, monospace;
 }
 
-/* Wrappers */
+/* Wrappers Phone mode*/
 #wrapper_main {
     display: grid;
-    height: 100vh;
-    grid-template-columns:1fr 1fr;
-    grid-template-rows: 60px 200px 500px;
-    grid-template-areas: 
-    "nav nav"
-    "rub rub"
-    "slogan picture"
+    grid-template-columns: 1fr;
+    grid-template-rows: 250px 200px 300px;
+    grid-template-areas:
+    "rub"
+    "slogan"
+    "picture"
     ;
 }
+
+#wrapper_hrl {
+    display: grid;
+    height: 100vh;
+    grid-template-columns:1fr;
+    grid-template-rows: 200px 200px 200px 200px;
+    grid-template-areas: 
+    "rub"
+    "picture2" 
+    "picture1"
+    "text"
+    ;
+}
+
+#wrapper_din_plikt {
+    display: grid;
+    height: 100vh;
+    grid-template-columns:1fr;
+    grid-template-rows: 200px 1fr;
+    grid-template-areas: 
+    "rub"
+    "etik"
+    ;
+}
+
+#wrapper_om_oss {
+    display: grid;
+    height: 100vh;
+    grid-template-columns:1fr;
+    grid-template-rows: 200px 200px 200px 200px;
+    grid-template-areas: 
+    "rub"
+    "pic2"
+    "pic1"
+    "text"
+    ;
+}
+
 
 /* Responsiv layout taggar */
 .links_visible {
@@ -49,7 +86,7 @@ nav {
     margin: var(--burgerline_margin);
     background: rgb(255, 255, 255);
     border-radius: 20%;
-    transition: all 0.5s;
+    transition: all 1s;
 }
 
 #link_list {
@@ -63,7 +100,6 @@ nav {
     justify-content: space-around;
     list-style: none;
     z-index: 1;
-    border: 1px solid grey;
 }
 
 #burger {
@@ -101,26 +137,187 @@ nav {
     transform: translateY(calc((-1)*(var(--burgerline_height) + var(--burgerline_margin)))) rotate(-45deg);
 }
 
+/*Homepage phone mode*/
+#rubrik {
+    color: rgb(255, 255, 255);
+    font-size: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: rub;
+    height: 100%;
+    background-image: url(/img/Main_hlr.jpg);
+    background-position: center center;
+
+}
+
+#picture_main {
+    grid-area: picture;
+    background-color: #355A61;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#slogan {
+    grid-area: slogan;
+    background-color:#355A61;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#context_bild_main {
+    width: 200px;
+    height: auto;
+    border: 10px solid white;
+}
+
+.slagord {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    color: white;
+    font-size: small;
+    position: relative;
+    left: 20px;
+}
+    
+/* HRL Phone mode*/
+#rubrik_hrl {
+    grid-area: rub;
+    background-color: red;
+    height: 100%;
+    width: 100%;
+}
+
+#text_hlr {
+    grid-area: text;
+    background-color: green;
+}
+
+#picture_hlr_2 {
+    grid-area: picture1;
+    background-color: blue;
+}
+
+#picture_hlr_1 {
+    background-color: purple;
+    grid-area: picture2;
+}
+
+
+/* Din plikt Phone mode*/
+
+#rubrik_din_plikt {
+    grid-area: rub;
+    background-color: red;
+    height: 100%;
+}
+
+#text_din_plikt {
+    grid-area: etik;
+    background-color: green;
+
+}
+
+/* Om oss Phone mode*/
+
+#rubrik_om_oss {
+    grid-area: rub;
+    background-color: red;
+    height: 100%;
+}
+
+#text_om_oss {
+    grid-area: text;
+    background-color: green;
+}
+
+#picture_om_oss_1 {
+    background-color: purple;
+    grid-area: pic1;
+    
+}
+
+#picture_om_oss_2 {
+    grid-area: pic2;
+    background-color: blue;
+}
+
 
 @media screen and (min-width: 800px) {
 
-main {
+#rubrik {
+        grid-area: rub;
+        background-image: url(/img/Main_hlr.jpg);
+        background-size: cover;
+        position: relative;
+        height: 100%;
+        width: 200%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        font-size: 6.25rem;
+        letter-spacing: 0.1875rem;
+        text-transform: uppercase;
+}
+    
+/* Wrappers computer mode*/
+#wrapper_main {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 250px 400px minmax(250px, 1fr);
-        grid-template-areas:
-            "welcome_ section2"
-            "section1 section3" 
-            "section4 section4"
-            ;
-        gap: 2px;
-        background: grey;
-    }
+        height: 100vh;
+        grid-template-columns:1fr 1fr;
+        grid-template-rows: 400px 600px;
+        grid-template-areas: 
+        "rub rub"
+        "slogan picture"
+        ;
+}
+
+#wrapper_hrl {
+    display: grid;
+    height: 100vh;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows: 300px 200px 1fr;
+    grid-template-areas: 
+    "rub picture2"
+    "rub text"
+    "picture1 text"
+    ;
+}
+
+#wrapper_din_plikt {
+    display: grid;
+    height: 100vh;
+    grid-template-columns:1fr;
+    grid-template-rows: 200px 1fr;
+    grid-template-areas: 
+    "rub"
+    "etik"
+    ;
+}
+
+#wrapper_om_oss {
+    display: grid;
+    height: 100vh;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows: 300px 1fr;
+    grid-template-areas: 
+    "rub pic2"
+    "pic1 text"
+    ;
+}
 
 
+/*Burger tranformation*/
 #burger {
 
-    display: none;
+display: none;
 }
 
 #link_list {
@@ -136,36 +333,158 @@ main {
     color: black;
 }
 
+/* Homepage Computer mode*/
+#rubrik {
+
+    color: white;
 }
-
-/* Första sida (Homepage) */
-
 
 #picture_main {
     grid-area: picture;
+    background-color: #355A61;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+}
+
+
+
+#context_bild_main {
+    width: 300px;
+    height: auto;
+    border: 10px solid white;
 }
 
 #slogan {
     grid-area: slogan;
-    background-color: purple;
-
-}
-
-.rubrik {
-    grid-area: rub;
-    background-color: #00A788;
-    height: 260px;
-    width: 200%;
+    background-color:#355A61;
     display: flex;
+    align-items: baseline;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    font-size: 6.25rem;
-    letter-spacing: 0.1875rem;
-    text-transform: uppercase;
+
 }
 
+.slagord {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    color: white;
+    font-size: 20px;
+    position: relative;
+    left: 20px;
+    border: 10px solid #2c4a51;
+    background-color: #2c4a51;
+    border-radius: 8px;
+
+}
+/* HRL Computer mode*/
+#rubrik_hrl {
+    grid-area: rub;
+    background-color: #355A61;
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#inledning_hlr {
+    margin-top: 20px;
+    color: white;
+    width: 60%;
+    word-spacing: 2px;
+    font-size: 20px;
+
+}
+
+.big_text {
+    font-size: 90px;
+}
+
+#text_hlr {
+    grid-area: text;
+    background-color: #355A61;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-left: 5px double white;
+}
+
+#intro_7_steg {
+    color: white;
+    margin-bottom: 30px;
+    font-size: x-large;
+
+}
+
+.steg_7 {
+    color: white;
+    font-size: x-large;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}
+
+#picture_hlr_2 {
+    grid-area: picture1;
+    background-color: blue;
+}
+
+#picture_hlr_1 {
+    background-color: purple;
+    grid-area: picture2;
+    border-left: 5px double white;
+}
+
+
+/* Din plikt Computer mode*/
+
+#rubrik_din_plikt {
+    grid-area: rub;
+    background-color: red;
+    height: 100%;
+}
+
+
+#text_din_plikt {
+    grid-area: etik;
+    background-color: green;
+
+}
+
+/* Om oss Computer mode*/
+
+#rubrik_om_oss {
+    grid-area: rub;
+    background-color: red;
+    height: 100%;
+}
+
+#text_om_oss {
+    grid-area: text;
+    background-color: green;
+}
+
+#picture_om_oss_1 {
+    background-color: purple;
+    grid-area: pic1;
+    
+}
+
+#picture_om_oss_2 {
+    grid-area: pic2;
+    background-color: blue;
+}
+
+
+
+    }
 
 
 
