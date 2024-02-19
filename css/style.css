@@ -29,7 +29,7 @@ nav {
 #wrapper_main {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 250px 200px 300px;
+    grid-template-rows: 250px 300px 300px;
     grid-template-areas:
     "rub"
     "slogan"
@@ -93,17 +93,19 @@ nav {
     background: var(--background_color);
     display: flex;
     flex-direction: column;
-    height: 400px;
+    height: 300px;
     position: absolute;
     top: -400px;
-    align-items: center;
-    justify-content: space-around;
     list-style: none;
     z-index: 1;
+    align-items: center;
+    justify-content: space-around;
+    width: 110px;
+    border-bottom-left-radius: 30px;
 }
 
 #burger {
-    margin-right: 80px;
+    margin-right: 30px;
     cursor: pointer;
 }
 
@@ -111,14 +113,10 @@ nav {
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-weight: bold;
-    font-size: 1.25rem;
-    letter-spacing: 0.1875rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
-    width: 200px;
-    height: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100px;
+   
 }
 
 #link_list a:hover {
@@ -139,16 +137,16 @@ nav {
 
 /*Homepage phone mode*/
 #rubrik {
+    grid-area: rub;
+    background-image: url(/img/Main_hlr.jpg);
+    background-size: cover;
+
+}
+
+#rubrik_text {
+    color: white;
     color: rgb(255, 255, 255);
     font-size: 6rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-area: rub;
-    height: 100%;
-    background-image: url(/img/Main_hlr.jpg);
-    background-position: center center;
-
 }
 
 #picture_main {
@@ -167,12 +165,21 @@ nav {
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    
+}
+
+.slagord {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-family: Arial, sans-serif;
+
+
 }
 
 #context_bild_main {
     width: 200px;
     height: auto;
-    border: 10px solid white;
+    border-radius: 20%;
 }
 
 .slagord {
@@ -251,23 +258,34 @@ nav {
 
 @media screen and (min-width: 800px) {
 
-#rubrik {
-        grid-area: rub;
-        background-image: url(/img/Main_hlr.jpg);
-        background-size: cover;
-        position: relative;
-        height: 100%;
-        width: 200%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-weight: bold;
-        font-size: 6.25rem;
-        letter-spacing: 0.1875rem;
-        text-transform: uppercase;
-}
+/*Burger tranformation*/
+#burger {
+
+    display: none;
+    }
+    
+    #link_list {
+        flex-direction: row;
+        height: 100px;
+        width: 100%;
+        position: absolute;
+        top: 0px;
+        font-size: 30px;
+    }
+
+    #link_list a {
+        font-size: 30px;
+    }
+    
+
+    #link_list a:hover {
+        background: none;
+        color: black;
+    }
+    
     
 /* Wrappers computer mode*/
+
 #wrapper_main {
         display: grid;
         height: 100vh;
@@ -314,29 +332,22 @@ nav {
 }
 
 
-/*Burger tranformation*/
-#burger {
-
-display: none;
-}
-
-#link_list {
-    flex-direction: row;
-    height: 100px;
-    width: 100%;
-    position: absolute;
-    top: 0px;
-}
-
-#link_list a:hover {
-    background: none;
-    color: black;
-}
 
 /* Homepage Computer mode*/
 #rubrik {
+    grid-area: rub;
+    background-image: url(/img/Main_hlr.jpg);
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    color: white;
+}
+
+#rubrik_text {
+    color: rgb(255, 255, 255);
+    font-size: 6rem;
 }
 
 #picture_main {
@@ -351,9 +362,10 @@ display: none;
 
 
 #context_bild_main {
-    width: 300px;
+    width: 400px;
     height: auto;
-    border: 10px solid white;
+    border-radius: 40px solid white;
+
 }
 
 #slogan {
@@ -371,7 +383,7 @@ display: none;
     margin-top: 20px;
     font-weight: bold;
     font-family: Arial, sans-serif;
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 20px;
     position: relative;
     left: 20px;
