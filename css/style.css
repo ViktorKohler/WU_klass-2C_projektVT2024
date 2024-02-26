@@ -115,12 +115,11 @@ nav {
     font-weight: bold;
     font-size: 0.8rem;
     text-transform: uppercase;
-    width: 100px;
-   
 }
 
 #link_list a:hover {
     color: black;
+    height: 100%;
 }
 
 .burger_in_x_form #burger_line_2 {
@@ -270,16 +269,22 @@ nav {
         width: 100%;
         position: absolute;
         top: 0px;
-        font-size: 30px;
+        justify-content: space-evenly;
     }
 
     #link_list a {
         font-size: 30px;
     }
     
+    li {
+        background-color: rgb(255, 102, 0);
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
 
-    #link_list a:hover {
-        background: none;
+    li:hover {
         color: black;
     }
     
@@ -301,11 +306,11 @@ nav {
     display: grid;
     height: 100vh;
     grid-template-columns:1fr 1fr;
-    grid-template-rows: 300px 200px 1fr;
+    grid-template-rows: 300px 200px auto;
     grid-template-areas: 
-    "rub picture2"
-    "rub text"
-    "picture1 text"
+    "rub picture1"
+    "picture2 text"
+    "picture2 text"
     ;
 }
 
@@ -362,7 +367,7 @@ nav {
 
 
 #context_bild_main {
-    width: 400px;
+    width: 350px;
     height: auto;
     border-radius: 40px solid white;
 
@@ -401,21 +406,21 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-
+    justify-content: flex-start;
 }
 
 #inledning_hlr {
-    margin-top: 20px;
+    margin-top: 2px;
     color: white;
-    width: 60%;
+    width: 80%;
     word-spacing: 2px;
     font-size: 20px;
 
 }
 
 .big_text {
-    font-size: 90px;
+    font-size: 60px;
+    margin-top: 60px;
 }
 
 #text_hlr {
@@ -425,34 +430,101 @@ nav {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    border-left: 5px double white;
 }
+
+#picture_hlr_1 {
+    background-color: #355A61;
+    grid-area: picture2;
+    position: relative;
+}
+
+#bild1 {
+    width: 350px;
+    height: auto;
+    position: absolute;
+    left: 20%;
+    bottom: 40px;
+}
+
+#x1_axel {
+    position: absolute;
+    bottom: 15px;
+    right: 25%;
+    display: flex;
+    flex-direction: row;
+    width: 340px;
+    justify-content: space-between;
+    letter-spacing: 24px;
+    color: rgb(255, 102, 0);
+}
+
+#y1_axel {
+    position: absolute;
+    right: 90%;
+    bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    width: 5px;
+    font-size: medium;
+    color: rgb(255, 102, 0);
+}
+
+#picture_hlr_2 {
+    grid-area: picture1;
+    background-color: #355A61;
+    position: relative;
+}
+
+#bild2 {
+    position: absolute;
+    right: 25%;
+    top: 5%;
+    width: 350px;
+    height: auto;
+}
+
+
+#x2_axel {
+    position: absolute;
+    top: 90%;
+    right: 35%;
+    display: flex;
+    flex-direction: row;
+    color: rgb(255, 102, 0);
+}
+
+#y2_axel {
+    position: absolute;
+    right: 90%;
+    bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    width: 5px;
+    font-size: medium;
+    color: rgb(255, 102, 0);
+}
+
+
 
 #intro_7_steg {
     color: white;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+    margin-top: 10px;
     font-size: x-large;
 
 }
 
 .steg_7 {
     color: white;
-    font-size: x-large;
+    font-size: large;
     padding-top: 5px;
     padding-bottom: 5px;
 
 }
 
-#picture_hlr_2 {
-    grid-area: picture1;
-    background-color: blue;
-}
 
-#picture_hlr_1 {
-    background-color: purple;
-    grid-area: picture2;
-    border-left: 5px double white;
-}
+
+
 
 
 /* Din plikt Computer mode*/
