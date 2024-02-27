@@ -117,11 +117,6 @@ nav {
     text-transform: uppercase;
 }
 
-#link_list a:hover {
-    color: black;
-    height: 100%;
-}
-
 .burger_in_x_form #burger_line_2 {
     opacity: 0;
 }
@@ -277,17 +272,24 @@ nav {
     }
     
     li {
-        background-color: rgb(255, 102, 0);
+        background-color:#355A61;
         display: flex;
         width: 100%;
-        justify-content: center;
-        align-items: center;
+        height: 100%;
     }
 
     li:hover {
-        color: black;
+        background-color: black;
+        color: white;
     }
     
+    a { 
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     
 /* Wrappers computer mode*/
 
@@ -308,7 +310,7 @@ nav {
     grid-template-columns:1fr 1fr;
     grid-template-rows: 300px 200px auto;
     grid-template-areas: 
-    "rub picture1"
+    "rub text"
     "picture2 text"
     "picture2 text"
     ;
@@ -400,7 +402,7 @@ nav {
 /* HRL Computer mode*/
 #rubrik_hrl {
     grid-area: rub;
-    background-color: #355A61;
+    background-color: #47676d;
     width: 100%;
     color: white;
     display: flex;
@@ -423,17 +425,8 @@ nav {
     margin-top: 60px;
 }
 
-#text_hlr {
-    grid-area: text;
-    background-color: #355A61;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
 #picture_hlr_1 {
-    background-color: #355A61;
+    background-color:#47676d;
     grid-area: picture2;
     position: relative;
 }
@@ -469,41 +462,15 @@ nav {
     color: rgb(255, 102, 0);
 }
 
-#picture_hlr_2 {
-    grid-area: picture1;
-    background-color: #355A61;
-    position: relative;
-}
-
-#bild2 {
-    position: absolute;
-    right: 25%;
-    top: 5%;
-    width: 350px;
-    height: auto;
-}
-
-
-#x2_axel {
-    position: absolute;
-    top: 90%;
-    right: 35%;
+#text_hlr {
+    grid-area: text;
+    background-color:#47676d;
+    /*transform: skew(20deg);*/
     display: flex;
-    flex-direction: row;
-    color: rgb(255, 102, 0);
-}
-
-#y2_axel {
-    position: absolute;
-    right: 90%;
-    bottom: 100px;
-    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
-    width: 5px;
-    font-size: medium;
-    color: rgb(255, 102, 0);
 }
-
 
 
 #intro_7_steg {
