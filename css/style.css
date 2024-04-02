@@ -10,12 +10,16 @@
     --burgerline_width: 30px;
     --burgerline_height: 6px;
     --burgerline_margin: 5px;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
 }
 
 /* Generella taggar */
 nav {
     height: 100px;
-    width: 100vw;
+    width: 100%;
     background-color: var(--background_color);
     display: flex;
     justify-content: flex-end;
@@ -27,25 +31,24 @@ nav {
 /* Wrappers Phone mode*/
 #wrapper_main {
     display: grid;
-    height: 100vh;
-    grid-template-columns: 1fr;
-    grid-template-rows: 250px 200px;
-    grid-template-areas:
+    width: 100%;
+    grid-template-columns:1fr;
+    grid-template-rows: 200px 300px 150px;
+    grid-template-areas: 
     "rub"
-    "slogan"
-    "picture"
+    "slogan" 
+    "bilder"
     ;
 }
 
 #wrapper_hrl {
     display: grid;
-    height: 100vh;
+    width: 100%;   
     grid-template-columns:1fr;
-    grid-template-rows: 200px 200px 200px 200px;
+    grid-template-rows: 200px 300px 250px;
     grid-template-areas: 
     "rub"
     "picture2" 
-    "picture1"
     "text"
     ;
 }
@@ -68,9 +71,9 @@ nav {
     grid-template-rows: 200px 200px 200px 200px;
     grid-template-areas: 
     "rub"
-    "pic2"
-    "pic1"
-    "text"
+    "text1"
+    "pic"
+    "text2"
     ;
 }
 
@@ -136,205 +139,228 @@ nav {
 /*Homepage phone mode*/
 #rubrik {
     grid-area: rub;
-    width: ;
-    height: 100%;
-    width: 100vw;
-}
-
-#main_back {
-    width: 100vw;
-    height: 100%;
-    position: relative;
     background-color: red;
-    visibility: hidden;
-
-
-}
-
-#Logga_om_oss {
-    width: 200px;
-    height: auto;
-}
-
-#rubrik_text {
-    color: white;
-    color: rgb(255, 255, 255);
-    font-size: 6rem;
-    
-}
-
-#picture_main {
-    grid-area: picture;
-    background-color: #355A61;
+    height: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-image: url("/img/Main_hlr.jpg");
 
 }
 
 
+#Logga_om_oss {
+    height: auto;
+    width: 85%;
+}
 
 #slogan {
     grid-area: slogan;
-    background-color:#355A61;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    
-}
-
-.slagord {
-    margin-bottom: 5px;
-    margin-top: 5px;
-    font-family: Arial, sans-serif;
-
-
-}
-
-#context_bild_main {
-    width: 200px;
-    height: auto;
-    border-radius: 20%;
-}
-
-.slagord {
-    padding-bottom: 10px;
-    padding-top: 10px;
-    font-weight: bold;
-    font-family: Arial, sans-serif;
+    width: 100%;
+    background-color: #355A61;
     color: white;
-    font-size: small;
-    position: relative;
-    left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 20px;
+    font-size: 1.2rem;
 }
 
-
-#context_bild_main_1 {
-    /* position: absolute;
-    left:  150px;
-    bottom: -20px;
-    width: 260px;
-    height: auto;
-    border-radius: 50%; */
-    visibility:hidden;
-
+#mobil_bilder {
+    grid-area: bilder;
+    background-color: #063d48;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
 }
 
-#context_bild_main_2 {
-    /* position: absolute;
-    left:  400px;
-    bottom: 300px;
-    width: 200px;
-    height: auto;
-    border-radius: 50%; */
-    visibility:hidden;
-}
-
-#context_bild_main_3 {
-    /* position: absolute;
-    left:  100px;
-    bottom: 400px;
-    width: 200px;
-    height: auto;
-    border-radius: 50%; */
-    visibility:hidden;
-}
-
-#context_bild_main_4 {
-    /* position: absolute;
-    left:  75%;
-    bottom: 35px;
-    width: 200px;
-    height: auto;
+.context_bild_main {
     border-radius: 50%;
-    z-index: 5; */
-    visibility:hidden;
+    height: auto;
+    width: 20%;
+
 }
 
-#context_bild_main_5 {
-    /* position: absolute;
-    left:  85%;
-    bottom: 300px;
-    width: 150px;
-    height: auto;
-    border-radius: 50%; */
-    visibility:hidden;
-}
     
 /* HRL Phone mode*/
 #rubrik_hrl {
     grid-area: rub;
-    background-color: red;
+    background-color: #355A61;
     height: 100%;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
 }
 
-#text_hlr {
-    grid-area: text;
-    background-color: green;
+.big_text {
+    color: orange;
+    font-size: 2rem;
 }
 
-#picture_hlr_2 {
-    grid-area: picture1;
-    background-color: blue;
+#inledning_hlr {
+    color: white;
+    width: 100%;
+    font-size: 1rem;
+
 }
 
 #picture_hlr_1 {
-    background-color: purple;
+    background-color: #4c7a83;
     grid-area: picture2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #bild1 {
-    width: 100px;
+    width: 300px;
     height: auto;
-    position: absolute;
-    left: 20%;
-    bottom: 40px;
 }
 
 
+#x1_axel {
+    position: absolute;
+    bottom: 15%;
+    right: 0%;
+    display: flex;
+    flex-direction: row;
+    width: 340px;
+    justify-content: space-between;
+    letter-spacing: 15px;
+    color: rgb(255, 102, 0);
+}
+#inte_spaced {
+    letter-spacing: normal;
+    position: relative;
+    font-size: 0.5rem;
+    right: 5%;  
+}
+#y1_axel {
+    position: absolute;
+    right: 95%;
+    bottom: 45%;
+    display: flex;
+    flex-direction: column;
+    width: 5px;
+    font-size: 0.8rem;
+    color: rgb(255, 102, 0);
+}
+
+
+
+#text_hlr {
+    grid-area: text;
+    background-color: #304f56;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    padding: 10px;
+}
+
+#intro_7_steg {
+    color: orange;
+    margin: 10px;
+
+}
 
 /* Din plikt Phone mode*/
 
 #rubrik_din_plikt {
     grid-area: rub;
-    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-size: 2rem;
+    background-color: #376c77;
     height: 100%;
+    width: 100%;
+    color: orange;
+    
+}
+
+#plikt_bak {
+    width: 90%;
+    height: auto;
+    filter: brightness(40%);
+    box-shadow: 10px 10px 30px 10px rgba(0, 0, 0, 0.7);
 }
 
 #text_din_plikt {
     grid-area: etik;
-    background-color: green;
+    background-color: #10343b;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+    position: relative;
+}
 
+#moral_text {
+    width: 85%;
+    font-size: 1rem;
+    color: white;
+    position: absolute;
+}
+
+.line {
+    font-size: 2rem;
+    color: orange;
+    word-spacing: 0px;
 }
 
 /* Om oss Phone mode*/
 
 #rubrik_om_oss {
     grid-area: rub;
-    background-color: red;
+    background-color: #376c77;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#om_oss_intro {
+    grid-area: text1;
+    background-color: #254a51;
+    height: 100%;
+    padding: 10px;
+    color: white;
+    flex-direction: row;
+    padding: 20px;
+    font-size: 1rem;
 }
 
 #text_om_oss {
-    grid-area: text;
-    background-color: green;
+    grid-area: text2;
+    background-color: #1a373d;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    color: white;
+    flex-direction: column;
+    font-size: 1.2rem;
 }
 
 #picture_om_oss_1 {
-    background-color: purple;
-    grid-area: pic1;
-    
+    grid-area: pic;
+    background-image: url("/img/Om_oss_1.jpg");
+    background-size: cover;
 }
-
-#picture_om_oss_2 {
-    grid-area: pic2;
-    background-color: blue;
-}
-
 
 @media screen and (min-width: 800px) {
+    
 
 /*Burger tranformation*/
 #burger {
@@ -382,21 +408,22 @@ nav {
     }
     
 /* Wrappers computer mode*/
-
 #wrapper_main {
-        display: grid;
-        height: 100vh;
-        grid-template-columns:1fr 1fr;
-        grid-template-rows: 400px 600px;
-        grid-template-areas: 
-        "rub rub"
-        "slogan picture"
-        ;
+    display: grid;
+    width: 100%;
+    grid-template-columns:1fr;
+    grid-template-rows: 300px 300px 300px;
+    grid-template-areas: 
+    "rub"
+    "slogan"
+    "bilder"
+    ;
 }
 
 #wrapper_hrl {
     display: grid;
     height: 100vh;
+    width: 100%;
     grid-template-columns:1fr 1fr;
     grid-template-rows: 300px 200px auto;
     grid-template-areas: 
@@ -420,11 +447,11 @@ nav {
 #wrapper_om_oss {
     display: grid;
     height: 100vh;
+    width: 100%;
     grid-template-columns:1fr 1fr;
-    grid-template-rows: 200px 350px;
+    grid-template-rows: 200px auto;
     grid-template-areas: 
     "rub text"
-    "pic1 pic1"
     "pic1 pic1"
     ;
 }
@@ -434,135 +461,51 @@ nav {
 /* Homepage Computer mode*/
 #rubrik {
     grid-area: rub;
+    background-image: url("/img/Main_hlr.jpg");
+    background-size: cover;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: visible;
+} 
 
-}
-
-#main_back {
-    width: 100%;
-    height: 400px;
-    position: absolute;
-    filter: brightness(60%);
-    visibility: visible;
-
-}
-
-#rubrik_text {
-    color: rgb(255, 255, 255);
-    font-size: 6rem;
-    filter: brightness(100%);
-}
-
-#picture_main {
-    grid-area: picture;
-    background-color: #355A61;
-    position:relative;
-    overflow:hidden;
-
-}
-
-
-
-#context_bild_main_1 {
-    position: absolute;
-    left:  150px;
-    bottom: -20px;
-    width: 260px;
+#Logga_om_oss {
     height: auto;
-    border-radius: 50%;
-    visibility:hidden;
-    visibility:visible;
-}
-
-#context_bild_main_2 {
-    position: absolute;
-    left:  400px;
-    bottom: 300px;
-    width: 200px;
-    height: auto;
-    border-radius: 50%;
-    visibility:visible;
-}
-
-#context_bild_main_3 {
-    position: absolute;
-    left:  100px;
-    bottom: 400px;
-    width: 200px;
-    height: auto;
-    border-radius: 50%;
-    visibility:visible;
-
-}
-
-#context_bild_main_4 {
-    position: absolute;
-    left:  75%;
-    bottom: 35px;
-    width: 200px;
-    height: auto;
-    border-radius: 50%;
-    z-index: 5;
-    visibility:visible;
-
-}
-
-#context_bild_main_5 {
-    position: absolute;
-    left:  85%;
-    bottom: 300px;
-    width: 150px;
-    height: auto;
-    border-radius: 50%;
-    visibility:visible;
-
+    width: 85%;
 }
 
 
 #slogan {
     grid-area: slogan;
-    background-color:#355A61;
+    width: 100%;
     display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    justify-content: space-evenly;
+    align-items: center;
+    justify-content: center;
 
 }
 
 .slagord {
-    margin-top: 100px;
-    margin-bottom: 80px;
-    font-weight: bold;
-    font-family: Arial, sans-serif;
-    color: rgb(255, 255, 255);
-    font-size: 20px;
-    position: relative;
-    width: 400px;
-    left: 40px;
-    border: 40px solid #2c4a51;
-    background-color: #2c4a51;
-    border-radius: 60%;
+    padding: 15px;
+    font-size: 1.5rem;
 
 }
 
-#utstickare {
-    font-weight: bold;
-    font-family: Arial, sans-serif;
-    color: rgb(255, 255, 255);
-    font-size: 20px;
-    width: 400px;
-    border: 40px solid #2c4a51;
-    background-color: #2c4a51;
-    border-radius: 60%;
-    position: absolute;
-    left: 280px;
-    margin: 10px;
-    z-index: 5;
+#mobil_bilder {
+    grid-area: bilder;
+    width: 100%;
+    visibility: visible;
+    background-color: #063d48;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
 }
+
+.context_bild_main {
+    border-radius: 50%;
+    height: 50%;
+    width: auto;
+
+}
+
+
 
 /* HRL Computer mode*/
 #rubrik_hrl {
@@ -606,14 +549,20 @@ nav {
 
 #x1_axel {
     position: absolute;
-    bottom: 15px;
+    bottom: 0px;
     right: 25%;
     display: flex;
     flex-direction: row;
     width: 340px;
     justify-content: space-between;
     letter-spacing: 24px;
-    color: rgb(255, 102, 0);
+    color: orange;
+}
+
+#inte_spaced {
+    font-size: 0.8rem;
+    position: relative;
+    bottom: 30px;
 }
 
 #y1_axel {
@@ -624,17 +573,19 @@ nav {
     flex-direction: column;
     width: 5px;
     font-size: medium;
-    color: rgb(255, 102, 0);
+    color: orange;
 }
 
 #text_hlr {
     grid-area: text;
     background-color:#47676d;
-    /*transform: skew(20deg);*/
     display: flex;
-    align-items: center;
     justify-content: flex-start;
+    align-items: flex-start;
     flex-direction: column;
+    padding-left: 10%;
+    list-style-type: circle;
+    list-style: none;
 }
 
 
@@ -651,8 +602,10 @@ nav {
     font-size: large;
     padding-top: 5px;
     padding-bottom: 5px;
+    text-align: left;
 
 }
+
 
 
 
@@ -665,6 +618,7 @@ nav {
     grid-area: rub;
     background-color:#47676d;
     height: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -676,6 +630,7 @@ nav {
 
 #text_din_plikt {
     grid-area: etik;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -688,33 +643,38 @@ nav {
 }
 
 #plikt_bak {
-    width: 85%;
+    width: 80%;
     height: auto;
     position: relative;
     filter: brightness(40%);
 }
 
 #moral_text {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: white;
     position: absolute;
-    width: 70%;
+    width: 60%;
 }
 
 .line {
     font-size: 4rem;
     color: orange;
-    letter-spacing: 0rem;
+    letter-spacing: 0px;
 }
 
-.line_small {
-    font-size: 3rem;
+
+#line_close {
+    font-size: 4rem;
     color: orange;
-    word-spacing: 0px;
-}
+    letter-spacing: -0.6rem;
 
+}
 /* Om oss Computer mode*/
 
+.color {
+    color: orange;
+
+}
 
 #rubrik_om_oss {
     grid-area: rub;
@@ -728,48 +688,58 @@ nav {
 }
 
 #Logga_om_oss {
-    width: 600px;
     height: auto;
     z-index: 6;
 }
 
 #om_oss_intro {
+    font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
     position: absolute;
-    top: 330px;
+    padding-bottom: 20px;
+    padding-top: 5%;
+    background-color: transparent;
+    height: 50%;
     z-index: 5;
     width: 40%;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     color: white;
     left: 6%;
-    background-color: ;
-
-
 }
 
 #text_om_oss {
     grid-area: text;
-    height: 560px;
+    position: absolute;
+    padding-top: 15%;
+    padding-left: 35px;
+    right: 0px;
+    height: 100%;
+    width: 40%;
     background-color: #263f45;
     color: white;
     display: flex;
-    position: relative;
-    font-size: 1.8rem;
-    justify-content:center;
-    align-items: center;
     flex-direction: column;
-    padding-left: 120px;
-    padding-right: 120px;
-    padding-top: 200px;
-    text-align: center;
+    justify-content: center;
+    font-size: 1.3rem;
     filter:opacity(80%);
     overflow: visible;
     z-index: 5;
+    row-gap: 30px;
+    
+}
+
+.text_inuti_oss {
+    text-align: left;
+    width: 50%;
 }
 
 #picture_om_oss_1 {
     background-image: url(/img/Om_oss_2.jpg);
     background-position: center;
-    height: 360px;
+    height: 100%;
+    width: 100%;
     background-size: cover;
     filter: brightness(50%);
     grid-area: pic1;
