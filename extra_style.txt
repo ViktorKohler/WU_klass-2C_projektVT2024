@@ -348,12 +348,10 @@ nav {
     font-size: 1.2rem;
 }
 
-
-#picture_om_oss {
+#picture_om_oss_1 {
     grid-area: pic;
-    width: 100%;
-    height: 100%;
-    filter: brightness(60%);
+    background-image: url("/img/Om_oss_1.jpg");
+    background-size: cover;
 }
 
 @media screen and (min-width: 800px) {
@@ -443,13 +441,13 @@ nav {
 
 #wrapper_om_oss {
     display: grid;
-    width: 100%;
     height: 100vh;
+    width: 100%;
     grid-template-columns:1fr 1fr;
-    grid-template-rows: 200px 400px;
+    grid-template-rows: 200px auto;
     grid-template-areas: 
     "rub text"
-    "pic_om pic_om"
+    "pic1 pic1"
     ;
 }
 
@@ -701,7 +699,7 @@ nav {
     z-index: 5;
     width: 40%;
     font-size: 1.6rem;
-    color: rgb(255, 255, 255);
+    color: white;
     left: 6%;
 }
 
@@ -731,11 +729,14 @@ nav {
     width: 50%;
 }
 
-#picture_om_oss {
-    grid-area: pic_om;
-    width: 100%;
-    height: 100%;
-    filter: brightness(40%);
+#picture_om_oss_1 {
+    background-image: url("img/Om_oss_1.jpg");
+    background-position: center;
+    height: 100px;
+    width: 100px;    
+    background-size: cover;
+    filter: brightness(50%);
+    grid-area: pic1;
 }
 
     }
