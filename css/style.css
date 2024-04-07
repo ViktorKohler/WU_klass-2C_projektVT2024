@@ -514,35 +514,6 @@ nav {
     bottom: 40px;
 }
 
-#x1_axel {
-    position: absolute;
-    bottom: 0px;
-    right: 25%;
-    display: flex;
-    flex-direction: row;
-    width: 340px;
-    justify-content: space-between;
-    letter-spacing: 24px;
-    color: orange;
-}
-
-#inte_spaced {
-    font-size: 0.8rem;
-    position: relative;
-    bottom: 30px;
-}
-
-#y1_axel {
-    position: absolute;
-    right: 90%;
-    bottom: 100px;
-    display: flex;
-    flex-direction: column;
-    width: 5px;
-    font-size: medium;
-    color: orange;
-}
-
 #text_hlr {
     grid-area: text;
     background-color:#47676d;
