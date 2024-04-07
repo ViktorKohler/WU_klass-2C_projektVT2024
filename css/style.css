@@ -491,6 +491,7 @@ nav {
     width: 80%;
     word-spacing: 2px;
     font-size: 20px;
+    z-index: 5;
 
 }
 
