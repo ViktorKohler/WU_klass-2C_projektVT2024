@@ -346,7 +346,7 @@ nav {
     }
 
     #link_list a {
-        font-size: 30px;
+        font-size: 2rem;
     }
     
     li {
@@ -496,7 +496,7 @@ nav {
 }
 
 .big_text {
-    font-size: 60px;
+    font-size: 4rem;
     margin-top: 60px;
 }
 
