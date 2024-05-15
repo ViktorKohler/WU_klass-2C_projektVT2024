@@ -57,10 +57,12 @@ nav {
     display: grid;
     height: 100vh;
     grid-template-columns:1fr;
-    grid-template-rows: 200px 1fr;
+    grid-template-rows: 200px 300px 200px 100px;
     grid-template-areas: 
     "rub"
     "etik"
+    "tjomme_bild"
+    "tjomme_text"
     ;
 }
 
@@ -144,7 +146,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url("/img/main_hlr.jpg");
+    background-image: url(../img/main_hlr.jpg);
 
 }
 
@@ -163,7 +165,7 @@ nav {
     flex-direction: column;
     justify-content: space-evenly;
     padding: 20px;
-    font-size: 1.2rem;
+    font-size: 0.8rem;
 }
 
 #mobil_bilder {
@@ -244,19 +246,19 @@ nav {
 /* Din plikt Phone mode*/
 
 #but_left {
-    height: 80px;
+    height: 40px;
     width: auto;
     position: absolute;
     z-index: 5;
-    left: 2%;
+    left: 1%;
 }
 
 #but_right {
-    height: 80px;
+    height: 40px;
     width: auto;
     position: absolute;
     z-index: 5;
-    right: 2%;
+    right: 1%;
 }
 
 
@@ -297,7 +299,7 @@ nav {
 
 #moral_text {
     width: 60%;
-    font-size: 1rem;
+    font-size: 0.7rem;
     color: white;
     position: absolute;
     font-family: "Sevillana", cursive;
@@ -307,6 +309,36 @@ nav {
     font-size: 2rem;
     color: orange;
     word-spacing: 0px;
+}
+
+
+#tjomme_bilder {
+    grid-area: tjomme_bild;
+    background-color: #1b6371;
+    display:grid;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.tjomme_pic {
+    width: 100px;
+    height: auto;
+}
+
+#tjomme_replik {
+    grid-area: tjomme_text;
+    background-color: #10343b;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.tjomme_snackar {
+    color: white;
+    font-size: calc(1vw +  1.2vh + 1.5vmin);
+    display: flex;
+
 }
 
 
@@ -335,7 +367,7 @@ nav {
     color: white;
     flex-direction: row;
     padding: 20px;
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 #text_om_oss {
@@ -461,7 +493,7 @@ nav {
 
 #rubrik {
     grid-area: rub;
-    background-image: url("/img/main_hlr.jpg");
+    background-image: url(../img/main_hlr.jpg);
     background-size: cover;
     width: 100%;
 } 
@@ -552,7 +584,7 @@ nav {
 
 #text_hlr {
     grid-area: text;
-    background-image: url(/img/dark_pulse.jpg);
+    background-image: url("../img/dark_pulse.jpg");
     background-size: cover;
     background-position: center;
     display: flex;
