@@ -73,7 +73,7 @@ nav {
     display: grid;
     width: 100%;   
     grid-template-columns:1fr;
-    grid-template-rows: 200px 300px 400px 400px 400px;
+    grid-template-rows: 200px 300px 450px 400px 500px;
     grid-template-areas: 
     "rub"
     "picture2" 
@@ -87,12 +87,14 @@ nav {
     display: grid;
     height: 100vh;
     grid-template-columns:1fr;
-    grid-template-rows: 200px 300px 200px 100px;
+    grid-template-rows: 200px 300px 200px 100px 560px 400px;
     grid-template-areas: 
     "rub"
     "etik"
     "tjomme_bild"
     "tjomme_text"
+    "duty"
+    "duty_pic"
     ;
 }
 
@@ -479,6 +481,39 @@ nav {
     color: white;
     font-size: calc(1vw +  1.2vh + 1.5vmin);
     display: flex;
+
+}
+
+#duty_beskrivning {
+    grid-area: duty;
+    background-color: #355A61;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+
+#long_texts {
+    margin-top: 2%;
+    color: white;
+    width: 80%;
+    font-size: 1.2rem;
+}
+
+#picnsutff {
+    grid-area: duty_pic;
+    background-color: #355A61 ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#pic_on_duty {
+    max-height: 56%;
+    width: auto;
 
 }
 
@@ -1032,6 +1067,7 @@ I
     margin-top: 2%;
     color: white;
     width: 80%;
+    font-size: 1.5rem;
 }
 
 #picnsutff {
@@ -1040,6 +1076,11 @@ I
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#pic_on_duty {
+    max-height: 100%;
+    width: auto;
 }
 
 
