@@ -655,13 +655,15 @@ nav {
 #wrapper_din_plikt {
     display: grid;
     height: 100vh;
-    grid-template-columns:1fr;
-    grid-template-rows: 200px 550px 600px 100px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px 550px 600px 100px 350px 500px;
     grid-template-areas: 
     "rub"
     "etik"
     "tjomme_bild"
     "tjomme_text"
+    "duty"
+    "duty_pic"
     ;
 }
 
@@ -1014,6 +1016,33 @@ I
     font-size: calc(1vw +  1.2vh + 1.5vmin);
 
 }
+
+#duty_beskrivning {
+    grid-area: duty;
+    background-color: #355A61;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+#long_texts {
+    margin-top: 2%;
+    color: white;
+    width: 80%;
+}
+
+#picnsutff {
+    grid-area: duty_pic;
+    background-color: #355A61 ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
 
 /* Om oss Computer mode*/
 
