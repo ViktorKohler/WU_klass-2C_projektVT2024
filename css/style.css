@@ -59,11 +59,13 @@ nav {
     display: grid;
     width: 100%;
     grid-template-columns:1fr;
-    grid-template-rows: 200px 300px 400px;
+    grid-template-rows: 200px 300px 200px 200px 300px ;
     grid-template-areas: 
     "rub"
     "slogan" 
     "bilder"
+    "text"
+    "image"
     ;
 }
 
@@ -71,11 +73,13 @@ nav {
     display: grid;
     width: 100%;   
     grid-template-columns:1fr;
-    grid-template-rows: 200px 300px 300px;
+    grid-template-rows: 200px 300px 400px 400px 400px;
     grid-template-areas: 
     "rub"
     "picture2" 
     "text"
+    "choose"
+    "places"
     ;
 }
 
@@ -96,12 +100,14 @@ nav {
     display: grid;
     height: 100vh;
     grid-template-columns:1fr;
-    grid-template-rows: 200px 200px 200px auto;
+    grid-template-rows: 200px 200px 200px 300px 500px 300px;
     grid-template-areas: 
     "rub"
     "text1"
     "pic"
     "text2"
+    "text_mig"
+    "pic_mig"
     ;
 }
 
@@ -211,8 +217,60 @@ nav {
 
 }
 
+#text_section {
+    grid-area: text; 
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background-color: #355A61;
+}
+
+#image_section {
+    grid-area: image;
+    width: 100%;
+    height: 100%;
+    background-color: #355A61;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#image_section img {
+    width: auto;
+    height: 60%;
+    border-radius: 7%;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#text_section_big {
+    color: orange;
+    font-size: 3rem;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 800;
+
+}
+
+#text_text {
+    color: white;
+    font-size: 2rem;
+
+}
+
     
 /* HRL Phone mode*/
+
+
+#footer_long {
+    background-color: #263f45;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    bottom: 0px;
+    width: 100%;
+}
+
 #rubrik_hrl {
     grid-area: rub;
     background-color: #355A61;
@@ -275,6 +333,56 @@ nav {
     margin-bottom: 10px;
 
 }
+
+#half_left {
+    padding-left: 3%;
+    padding-top: 3%;
+    grid-area: choose;
+    background-color: #3e5a5f;
+    height: 100%;
+    width: 100%;
+    color: white;
+}
+
+#bigger_text {
+    font-size: 1.2rem;
+    padding-top: 2%;
+
+}
+
+#lista_platser {
+    font-size: 1.2rem;
+    padding-top: 2%;
+    padding-bottom: 2%;
+
+}
+
+#half_right {
+    padding-left: 3%;
+    padding-top: 3%;
+    grid-area: places;
+    color: white;
+    background-color: #3e5a5f;
+    height: 100%;
+    width: 100%;
+}
+
+.rub_do {
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 800;
+    color: orange;
+    font-size: 2rem
+}
+
+.rub_do_smaller {
+    padding-top: 3%;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 800;
+    color: rgb(199, 131, 5);
+    font-size: 1.2rem
+
+}
+
 
 /* Din plikt Phone mode*/
 
@@ -383,6 +491,13 @@ nav {
     font-weight: 800;
 }
 
+#color_big {
+    color: orange;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 800;
+    font-size: 2rem;
+}
+
 #rubrik_om_oss {
     grid-area: rub;
     background-color: #376c77;
@@ -422,6 +537,43 @@ nav {
     filter: brightness(60%);
 }
 
+#profil_beskrivning {
+    grid-area: text_mig ;
+    background-color: #47676d;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 3%;
+    
+}
+
+#long_text {
+    color: white;
+    font-size: 1.2rem;
+}
+.rub_do_big {
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 800;
+    color: orange;
+    font-size: 4rem;
+}
+
+#profil_bild {
+    grid-area: pic_mig ;
+    background-color: #47676d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pic_on_me {
+    border: rgb(255, 255, 255) solid 5px;
+    max-height: 80%;
+    width: auto;
+
+}
 
 @media screen and (min-width: 800px) {
     
@@ -516,10 +668,11 @@ nav {
 #wrapper_om_oss {
     display: grid;
     grid-template-columns:1fr 1fr;
-    grid-template-rows: 200px auto;
+    grid-template-rows: 200px 720px 500px;
     grid-template-areas: 
     "rub text"
     "pic_om pic_om"
+    "text_mig pic_mig"
     ;
 }
 
@@ -745,7 +898,14 @@ I
 
 }
 
-
+#footer_long {
+    background-color: #263f45;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    bottom: 0px;
+    width: 200%;
+}
 
 
 /* Din plikt Computer mode*/
@@ -930,5 +1090,45 @@ I
     overflow: hidden;
     filter: brightness(40%);
 }
+
+#profil_beskrivning {
+    grid-area: text_mig ;
+    background-color: #47676d;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 3%;
+    
+}
+
+#long_text {
+    color: white;
+    font-size: 1.5rem;
+}
+.rub_do_big {
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 800;
+    color: orange;
+    font-size: 4rem;
+}
+
+#profil_bild {
+    grid-area: pic_mig ;
+    background-color: #47676d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pic_on_me {
+    border: rgb(255, 255, 255) solid 5px;
+    max-height: 80%;
+    width: auto;
+
+}
+
+
 
 }
