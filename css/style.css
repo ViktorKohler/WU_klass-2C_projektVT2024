@@ -705,7 +705,7 @@ nav {
 #wrapper_om_oss {
     display: grid;
     grid-template-columns:1fr 1fr;
-    grid-template-rows: 200px 720px 500px;
+    grid-template-rows: 200px 500px 500px;
     grid-template-areas: 
     "rub text"
     "pic_om pic_om"
@@ -1135,9 +1135,9 @@ I
     grid-area: text;
     position: absolute;
     padding-left: 120px;
-    padding-top: 150px;
+    padding-top: 250px;
     right: 0px;
-    height: 100%;
+    height: 700px;
     width: 40%;
     background-color: #263f45;
     color: white;
@@ -1150,7 +1150,8 @@ I
 
 .text_inuti_oss {
     text-align: left;
-    width: 50%;
+    width: 70%;
+    font-size: 1.4rem;
 }
 
 #picture_om_oss {
